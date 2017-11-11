@@ -59,7 +59,7 @@ LEFT OUTER JOIN station_geo_map sg ON i.station_id = sg.station_id
 LEFT OUTER JOIN song_artist_map sa ON i.song_id = sa.song_id
 WHERE i.batchid=${hiveconf:batchid};
 
-INSERT OVERWRITE LOCAL DIRECTORY '/home/cloudera/Assignment/musicProject/exporteddata/enricheddata'
+INSERT OVERWRITE LOCAL DIRECTORY '/home/cloudera/Assignment/musicProject/exportedata/enricheddata'
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
 STORED AS TEXTFILE

@@ -16,6 +16,6 @@ echo "Incrementing batchid..." >> $LOGFILE
 
 echo "Incrementing batchid..." >> $LOGFILE
 
-batchid=`$batchid +1`
+batchid=`expr $batchid +1`
 
 echo -n $batchid > /home/cloudera/Assignment/musicProjects/logs/current-batch.txt

@@ -7,7 +7,7 @@ geo_cd STRING
 )
 STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
 with serdeproperties
-("hbase.cloumns.mapping"=":key,geo:geo_cd")
+("hbase.columns.mapping"=":key,geo:geo_cd")
 tblproperties("hbase.table.name"="station-geo-map");
 
 create  external table if not exists subscribed_users
@@ -21,7 +21,7 @@ with serdeproperties
 ("hbase.columns.mapping"=":key,subscn:startdt,subscn:enddt")
 tblproperties("hbase.table.name"="subscribed-users");
 
-INSERT OVERWRITE LOCAL DIRECTORY '/home/cloudera/Assignment/musicProject/exporteddata/subscribeduser'
+INSERT OVERWRITE LOCAL DIRECTORY '/home/cloudera/Assignment/musicProject/exportedata/subscribeduser'
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
 STORED AS TEXTFILE
