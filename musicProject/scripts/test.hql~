@@ -1,0 +1,8 @@
+USE project;
+
+create external table if not exists station_geo_map
+(
+station_id STRING,
+geo_cd STRING
+)
+STORED BY 'org.apache.hadoop.hive.hbase.HBaseStroageHandler' with serdeproperties("hbase.cloumns.mapping"=":key,geo:geo_cd") tblproperties("hbase.table.name"="station-geo-map");
