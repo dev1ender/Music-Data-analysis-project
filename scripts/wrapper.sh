@@ -10,6 +10,6 @@ sh /home/cloudera/Assignment/musicProject/scripts/data_enrichment_filtering_sche
 
 sh /home/cloudera/Assignment/musicProject/scripts/data_enrichment.sh
 
-#sh /home/cloudera/Assignment/musicProject/scripts/data analysis.sh
+sh /home/cloudera/Assignment/musicProject/scripts/data analysis.sh
 
 
